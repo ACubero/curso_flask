@@ -29,3 +29,5 @@ ENDPOINT es el punto final, o la ruta de la web
 
 #Ejecutar el progama
 py o python <nombre de programa>
+
+make_response sirve para responder rutas pasando parámetros
