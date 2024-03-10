@@ -4,6 +4,16 @@ from flask import Flask, request, make_response, redirect,render_template
 app = Flask(__name__)
 
 items = ["Item1","Item2","Item3","Item4"]
+
+@app.route("/")
+def principal():
+    #creamos una nueva URL: nos entra por /index y nosotros lo reenviamos a /show_information_address
+    response = make_response( redirect("/index") )
+    
+    #devolvermos la respuesta
+    return response
+
+
 @app.route("/index")
 def index():
     user_ip_information = request.remote_addr
