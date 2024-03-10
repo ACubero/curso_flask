@@ -1,10 +1,11 @@
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
 @app.route("/")
 def inicio():
-    return "Inicio"
+    user_ip_information = request.remote_addr
+    return f"Tu dirección IP {user_ip_information}"
 
 @app.route("/hello")
 def hello():
